@@ -1,0 +1,61 @@
+﻿# Arrays
+
+Arrays are one of the most basic examples of a Data structure.
+
+Namespace: System.Arrays
+
+In an Array Data structure, you can store multiple values of the
+same type in an Array Data structure. Since C# is OOP, you can either
+specify the value of the type the Array is going to hold:
+
+```
+int []a1;
+```
+
+or you can specify the type **object** to tell the Array to hold anything
+
+```
+object []a1;
+```
+
+In the unified type system of C#, all types, predefined and user-defined,
+inherit directly or indirectly from Object
+
+
+Arrays can be:
+* Single-dimensional
+* Multi-dimensional
+* Jagged arrays
+
+It is also worth noticing that you can specify the LowerBound for the arrays,
+something not very common in other programming langauges. You can for example,
+start the first index at 1, instead of starting the first index at 0, by
+implementing an instance of Array using the CreateInstance method. I'm not yet
+sure of the importance or relevance of doing this other than readability.
+
+
+All arrays implemenet the IList, IEnumerable interfaces. Single-dimensional arrays
+also implement IList<T> and IEnumerable<T>.
+
+
+## Default behaviour
+
+The array elements are initialized with the default value, 0-bit pattern.
+
+
+## Differences with other languages
+
+C# Arrays are objects, instead of only addressable regions of contigous
+memory, as in C and C++.
+
+
+## Jagged arrays
+
+Jagged array are an interesting type of Array actually. They can be used to
+store rows of data of varying lengths to improve performance when working with
+multi-dimensional arrays. For example, in a situation where a lot of your
+values in your matrix are 0, probably cutting down all of those values will
+give you a noticable speed increase.
+
+
+In a Jagged array, it's elements are reference types, and are initialized to null.
