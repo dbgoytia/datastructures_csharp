@@ -38,7 +38,7 @@ All arrays implemenet the IList, IEnumerable interfaces. Single-dimensional arra
 also implement IList<T> and IEnumerable<T>.
 
 
-## Default behaviour
+## Default behaviour
 
 The array elements are initialized with the default value, 0-bit pattern.
 
@@ -110,7 +110,8 @@ In reality, this would look something like this in memory:
                     |
  __________         |    _____ _____ _____ _____
 |          |        |   |     |     |     |     |
-| numbers  |--------|-->|  5  |  7  |  1  |  4  |
+| numbers  |--------|-->|  5  |  7  |  1
+ |  4  |
 |__________|        |   |_____|_____|_____|_____|
 
 ```
