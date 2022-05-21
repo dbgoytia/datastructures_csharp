@@ -59,3 +59,59 @@ give you a noticable speed increase.
 
 
 In a Jagged array, it's elements are reference types, and are initialized to null.
+
+
+
+# Arrays in memory - how are they organized?
+
+Arrays are in the area of C# reference types. As you probably know,
+variables of reference types store references to their data (objects), while
+variables of the value types directly contain their data
+visit [reference types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)
+to learn more about it.
+
+
+For an example, let's assume we have two arrays, one that contains a **reference type**
+[StringBuilder](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-6.0),
+and one that contains a **value type** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+```
+// Reference type
+var builders = new StringBuilder[4];
+builders[0] = new StringBuilder("b1");
+builders[1] = new StringBuilder("b2");
+
+
+// Value type
+int[] numbers = new int[4];
+numbers[0] = 5;
+numbers[1] = 7;
+numbers[2] = 1;
+numbers[3] = 4;
+```
+
+In reality, this would look something like this in memory:
+
+```
+                    |
+   STACK            |    HEAP
+                    |
+ __________         |    _____ _____ _____ _____
+|          |        |   |     |     |     |     |
+| builders |--------|-->|     |     | null| null|
+|__________|        |   |_____|_____|_____|_____|
+                    |      |     |
+                    |      v     v
+                    |    _____   ____
+                    |   |     | |    |
+                    |   | b1  | | b2 |
+                    |   |_____| |____|
+                    |
+                    |
+ __________         |    _____ _____ _____ _____
+|          |        |   |     |     |     |     |
+| numbers  |--------|-->|  5  |  7  |  1  |  4  |
+|__________|        |   |_____|_____|_____|_____|
+
+```
+
