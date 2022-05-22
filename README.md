@@ -4,7 +4,7 @@ There's probably only as much as we can do without
 learning the most basic algorithms and DataStructures
 I'd like to continue learning using c#.
 
-## Abstract data type
+## Abstract data type
 
 Is a mathematical model for data types, where
 a data type is defined by it's behaviour (semantics)
@@ -19,7 +19,7 @@ data of this type, and the behaviour of these operations.
 store data and perform Push, Pop, and Peek operations (for ex.)
 but without digging into the details.
 
-## Data structure
+## Data structure
 
 Is a data organization, management and storage
 format that enables efficient access and modification.

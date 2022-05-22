@@ -73,7 +73,8 @@ to learn more about it.
 
 For an example, let's assume we have two arrays, one that contains a **reference type**
 [StringBuilder](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-6.0),
-and one that contains a **value type** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+and one that contains a **value type** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0
+
 
 ```
 // Reference type
@@ -110,9 +111,23 @@ In reality, this would look something like this in memory:
                     |
  __________         |    _____ _____ _____ _____
 |          |        |   |     |     |     |     |
-| numbers  |--------|-->|  5  |  7  |  1
- |  4  |
+| numbers  |--------|-->|  5  |  7  |  1  |  4  |
 |__________|        |   |_____|_____|_____|_____|
 
 ```
 
+## 32bit vs 64bit
+
+
+One other cool thing that you should understand is that the size of the allocated
+memory will dependo on the size of type being stored. Also the reference size
+will be different on 32 vs 64 bit machines. On a 32 bit machine, each reference
+will take 4 bytes, while on 64 bits machines it will store on 64 bits.
+
+Meaning that on 32 bit machine:
+* Builders array 2 * 4 = 8 bytes  
+* Numbers array 4 * 4 = 16 bytes -> Because each int32 uses 4 bytes to store data
+
+
+This is a rough estimation, because eventhough C# arrays are smart, there is an
+additional cost of using the arrays in reality.
