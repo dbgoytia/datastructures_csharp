@@ -13,9 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubbleSort", "src\BubbleSor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{162F2A64-7C86-4233-9059-0BCBE52ED328}"
 	ProjectSection(SolutionItems) = preProject
-		SortingAlgorithmStability.md = SortingAlgorithmStability.md
-		SelectionSort.md = SelectionSort.md
-		BubbleSort.md = BubbleSort.md
+		docs\SortingAlgorithmStability.md = docs\SortingAlgorithmStability.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSort", "src\InsertionSort\InsertionSort.csproj", "{5B8169CC-3646-4AA3-BB5C-F1EB15D0054B}"
