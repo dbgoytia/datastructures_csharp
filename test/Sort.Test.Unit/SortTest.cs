@@ -54,5 +54,10 @@ namespace TestSuite
             RunTestsForSortAlgorithm(BubbleSort.BubbleSort.Sort);
         }
 
+        [Test]
+        public void InsertionSort_ValidInput_SortedInput()
+        {
+            RunTestsForSortAlgorithm(InsertionSort.InsertionSort.Sort);
+        }
     }
 }

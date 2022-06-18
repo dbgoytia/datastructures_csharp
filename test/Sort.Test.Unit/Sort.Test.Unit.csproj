@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SelectionSort\SelectionSort.csproj" />
     <ProjectReference Include="..\..\src\BubbleSort\BubbleSort.csproj" />
+    <ProjectReference Include="..\..\src\InsertionSort\InsertionSort.csproj" />
+    <ProjectReference Include="..\..\src\InsertionSort\InsertionSort.csproj" />
+    <ProjectReference Include="..\..\src\SelectionSort\SelectionSort.csproj" />
   </ItemGroup>
 </Project>
