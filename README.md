@@ -6,7 +6,13 @@ In this repo, you'll find implementations and exaplanations
 of the performance of each of this algorithms, along with
 walk through examples.
 
+Topics covered:
 
+* Sorting Algorithms
+* Data structures
+
+
+#  Introduction to data structures
 
 ## Abstract data type
 
