@@ -4,7 +4,4 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Sort.Common\SortCommon.csproj" />
-  </ItemGroup>
 </Project>
