@@ -1,8 +1,12 @@
 ﻿## Introduction
 
 There's probably only as much as we can do without
-learning the most basic algorithms and DataStructures
-I'd like to continue learning using c#.
+learning the most basic algorithms and data structures.
+In this repo, you'll find implementations and exaplanations
+of the performance of each of this algorithms, along with
+walk through examples.
+
+
 
 ## Abstract data type
 
