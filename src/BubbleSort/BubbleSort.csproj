@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sort.Common\SortCommon.csproj" />
+    <ProjectReference Include="..\SortCommon\SortCommon.csproj" />
   </ItemGroup>
 </Project>
