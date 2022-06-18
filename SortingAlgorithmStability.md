@@ -1,4 +1,4 @@
-Stable vs Unstable Sorting
+﻿Stable vs Unstable Sorting
 ==========================
 
 Some of these algorithms are stable by definition. If the relative order of duplicate elements is preserved as a result of sorting algorithm, it's stable. If it's not then elements will be switched anyways.

@@ -1,10 +1,10 @@
 ﻿using NUnit.Framework;
 using System;
 
-namespace SelectionSort.Test.Unit
+namespace TestSuite
 {
     [TestFixture]
-    public class SelectionSortTests
+    public class SortTests
     {
         private int[][] Samples()
         {
@@ -21,9 +21,9 @@ namespace SelectionSort.Test.Unit
             return samples;
         }
 
-        private void RunTestsForSelectionSortAlgorithm(Action<int[]> sort)
+        private void RunTestsForSortAlgorithm(Action<int[]> sort)
         {
-            foreach(var sample in Samples())
+            foreach (var sample in Samples())
             {
                 sort(sample);
                 CollectionAssert.IsOrdered(sample);
@@ -33,7 +33,7 @@ namespace SelectionSort.Test.Unit
 
         private void PrintOut(int[] sample)
         {
-            TestContext.Progress.WriteLine("---- trace debub ---- \n");
+            TestContext.Progress.WriteLine("---- trace debug ---- \n");
             foreach (var element in sample)
             {
                 TestContext.Progress.Write(element + " ");
@@ -45,7 +45,13 @@ namespace SelectionSort.Test.Unit
         [Test]
         public void SelectionSort_ValidInput_Sorted()
         {
-            RunTestsForSelectionSortAlgorithm(SelectionSort.Sort);
+            RunTestsForSortAlgorithm(SelectionSort.SelectionSort.Sort);
+        }
+
+        [Test]
+        public void BubbleSort_ValidInput_SortedInput()
+        {
+            RunTestsForSortAlgorithm(BubbleSort.BubbleSort.Sort);
         }
 
     }

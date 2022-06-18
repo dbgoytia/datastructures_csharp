@@ -3,7 +3,7 @@
 namespace SelectionSort
 {
     /// <summary>
-    /// Representas an implementation of the Selection sort algorithm
+    /// Represent an implementation of the Selection sort algorithm
     /// </summary>
     public class SelectionSort
     {
